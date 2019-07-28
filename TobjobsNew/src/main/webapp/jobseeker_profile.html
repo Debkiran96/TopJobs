@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create your profile</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<body>
+  <div class="jumbotron text-center">
+    <h1> MAKE YOUR PROFILE HERE</h1>
+</div>
+
+<div class="container">
+
+<form action="makejobseekerprofile" method="post" id="form">
+	<h3>PERSONAL DETAILS:</h3>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="name" class="form-control" id="name" name="name" placeholder="Enter your full name">
+    </div>
+
+    
+    <div class="form-group">
+      <label for="date">Date of Birth:</label>
+      <input type="date" class="form-control" id="date" name="date">
+    </div>
+<div class="form-group">
+                    <label for="gender">Gender:</label>
+                    <input type="radio" name="gender" id="gender" value="Male">Male
+                    <input type="radio" name="gender" id="gender" value="Female">Female
+                    <div id='genderdiv'></div>
+                  </div>
+                  &nbsp;
+
+<h3>ADDRESS:</h3>
+<div class="form-group">
+      <label for="address">Current Address</label>
+      <input type="name" class="form-control" id="address" name="address" placeholder="Enter your Address">
+    </div>
+    <div class="form-group">
+      <label for="state">State:</label>
+      <input type="name" class="form-control" id="state" name="state" placeholder="Enter your state">
+    </div>
+    <div class="form-group">
+      <label for="city">City:</label>
+      <input type="name" class="form-control" id="city" name="city" placeholder="Enter your city name">
+    </div>
+    <div class="form-group">
+      <label for="zip">Zip Code:</label>
+      <input type="name" class="form-control" id="zip" name="zip" placeholder="Enter your Zip Code">
+    </div>
+&nbsp;
+<h3>EDUCATIONAL DETAILS:</h3>
+<div class="form-group">
+                    <label for="education">Highest Qualification:</label>
+                    <select class="form-control" id="education" name="education">
+                      <option>CHOOSE:</option>
+                      <option>POST GRADUATION</option>
+                      <option>GRADUATION</option>
+                      <option>CLASS 12</option>
+                      <option>CLASS 10</option>
+                    </select>
+                  </div>
+
+<div class="form-group">
+      <label for="year">Passing year:</label>
+      <input type="text" class="form-control" id="year" name="year" placeholder="Enter your passing year">
+    </div>
+
+    <div class="form-group">
+      <label for="bname">Board Name:</label>
+      <input type="text" class="form-control" id="bname" name="bname" placeholder="Enter your Board name">
+    </div>
+
+    <div class="form-group">
+      <label for="prcnt">Percentage:</label>
+      <input type="text" class="form-control" id="prcnt" name="prcnt" placeholder="Enter your total Percentage">
+    </div>
+    &nbsp;
+<h3>PROFESSIONAL DETAILS:</h3>
+<div class="form-group">
+      <label for="skills">Skills:</label>
+      <input type="text" class="form-control" id="skills" name="skills" placeholder="Enter your Technical/Professional Skills">
+    </div>
+<div class="form-group">
+      <label for="city">Preferred City(s):</label>
+      <input type="text" class="form-control" id="city" name="pcity" placeholder="Enter your Preferred city">
+    </div>
+
+    <div class="form-group">
+      <label for="Salary">Salary Expected:</label>
+      <input type="text" class="form-control" id="Salary" name="Salary" placeholder="Enter your Expected Salary">
+    </div>
+    <div class="form-group">
+      <label for="role">Preferred Job Role/Domain:</label>
+      <input type="text" class="form-control" id="role" name="role" placeholder="Enter your Preferred Job role/domain">
+    </div>
+
+<div class="checkbox">
+            <label>
+              <input type="checkbox">I agree with <a href="">terms and conditions</a></label>
+          </div>
+<div style="text-align: center;">
+<input type="submit" class="btn btn-info" value="Submit Now">
+</div>
+  </form>
+  </div> 
+</body>
+</html>

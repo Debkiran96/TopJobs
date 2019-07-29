@@ -278,9 +278,158 @@ a.homer {
 @media (max-width: 320px) {
 }
 
+.testimonials {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	position: relative;
+	display: block;
+	width: 100%;
+	min-height: 250px;
+}
 
+.testimonials ul {
+	list-style: none;
+	padding: 0;
+}
+
+.testimonials li {
+	display: inline-block;
+	background-color: white;
+	margin: 50px 10px 10px 10px;
+	width: calc((100% - 55px) / 2);
+	height: 200px;
+	border: solid 1px #bdbdbd;
+	position: relative;
+	transition: ease-in-out .3s;
+}
+
+.testimonials li img {
+	height: 70px;
+	width: 70px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	border-radius: 50%;
+	box-shadow: 0px 0px 0px 15px #fff;
+	background-color: #fff;
+	transition: box-shadow 0.3s linear;
+}
+
+.testimonials li p {
+	position: absolute;
+	width: 70%;
+	text-align: center;
+	top: 50px;
+	left: 50%;
+	transform: translatex(-50%);
+	font-size: 15px;
+}
+
+.testimonials li h1 {
+	position: absolute;
+	text-decoration: bold;
+	bottom: 10px;
+	left: 50%;
+	transform: translatex(-50%);
+	font-size: 17px;
+}
+
+.testimonials li:hover {
+	background-color: #212121;
+	color: #fff;
+}
+
+.testimonials li:hover img {
+	box-shadow: 0px 0px 0px 2px #fff;
+}
+
+@media only screen and (max-width: 860px) {
+	.testimonials li {
+		width: 70%;
+		margin: auto;
+		display: block;
+		margin-top: 70px;
+	}
+	
+	.testimonials li:first-child {
+		margin-top: 50px;
+	}
 
     </style>
+    <style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
@@ -335,6 +484,60 @@ if(status!=null){
 }
  %>
 <jsp:include page="ViewAllJobForSeeker.jsp"></jsp:include>
+
+
+<div class="jumbotron text-center">
+			<h1 > ABOUT US</h1>
+			<br>
+			<p style="text-align: center;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></p>
+            <a href="about_us.html">READ MORE...</a>
+		</div>
+ 
+ <div class="jumbotron text-center" style="background-color: #FADBD8  ">
+ <h1>Testimonials:</h1>
+	<div class = "testimonials">
+		<ul>
+			<li>
+				<img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkSflTI9DIJAstZ8fesrSz70HR8oH9BN_d8w0cjGEtiZyqDcs8">
+				<p>"Integer in cursus massa. Curabitur viverra, libero sed eleifend pellentesque, metus quam commodo lorem, ut laoreet ipsum metus ac augue."</p>
+				<h1>Martin Kovaks</h1>
+			</li>
+			<li>
+				<img src = "https://i.pinimg.com/236x/2d/e5/7f/2de57f8025bd64dffd554de0f080ee7f--my-pinterest-pinterest-board.jpg?b=t">
+				<p>"Sed vitae augue arcu. In pharetra ultricies mi eget interdum. Donec feugiat, orci at mattis laoreet, mauris mauris interdum arcu, ac viverra nibh purus a eros."</p>
+				<h1>Adrea Glauber</h1>
+			</li>
+		</ul>
+ </div>
+
+<body>
+<button class="open-button" onclick="openForm()">Chat</button>
+
+<div class="chat-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Chat</h1>
+
+    <label for="msg"><b>Message</b></label>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+</body>
 
 </body>
 

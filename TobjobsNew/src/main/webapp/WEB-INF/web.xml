@@ -4,4 +4,14 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>admin_login</servlet-name>
+  	<display-name>admin_login</display-name>
+  	<description></description>
+  	<servlet-class>niit.admin_login</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>admin_login</servlet-name>
+  	<url-pattern>/admin_login</url-pattern>
+  </servlet-mapping>
 </web-app>
